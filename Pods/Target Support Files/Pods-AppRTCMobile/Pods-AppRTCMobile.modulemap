@@ -1,0 +1,6 @@
+framework module Pods_AppRTCMobile {
+  umbrella header "Pods-AppRTCMobile-umbrella.h"
+
+  export *
+  module * { export * }
+}

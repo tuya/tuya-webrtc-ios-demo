@@ -1,0 +1,6 @@
+framework module Pods_AppRTCMobileTests {
+  umbrella header "Pods-AppRTCMobileTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

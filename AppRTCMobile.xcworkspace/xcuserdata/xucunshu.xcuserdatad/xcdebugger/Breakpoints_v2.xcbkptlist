@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "52751216-44BA-4922-AC41-96D8E664D180"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87DB0831-894F-4F2E-B80A-2EE2E26BC98F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppRTCMobile/ios/ARDVideoCallViewController.m"
+            timestampString = "594549250.424866"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "-videoCallViewDidChangeRoute:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85E4660F-0402-4346-B0E5-A433CAF0035B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppRTCMobile/ios/ARDMainViewController.m"
+            timestampString = "594549250.424924"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "-mainView:didInputRoom:isIPCDebug:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF41F4C7-9614-4419-8270-577C597C42D3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppRTCMobile/ios/ARDMainViewController.m"
+            timestampString = "594549250.424976"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "-configureAudioSession"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A2B05B59-3928-4DA8-8E16-8A5C1562EC9D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppRTCMobile/ARDAppClient.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1565"
+            endingLineNumber = "1565"
+            landmarkName = "-sessionManager:didChangeState:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A2B05B59-3928-4DA8-8E16-8A5C1562EC9D - 9d6c4448faa356c0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__46-[ARDAppClient sessionManager:didChangeState:]_block_invoke"
+                  moduleName = "AppRTCMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xucunshu/Desktop/AppRTCDemo-m65-new/AppRTCMobile/ARDAppClient.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1559"
+                  endingLineNumber = "1559"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "A2B05B59-3928-4DA8-8E16-8A5C1562EC9D - ca64b9f2a8b32f01"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__46-[ARDAppClient sessionManager:didChangeState:]_block_invoke_2"
+                  moduleName = "AppRTCMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xucunshu/Desktop/AppRTCDemo-m65-new/AppRTCMobile/ARDAppClient.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1560"
+                  endingLineNumber = "1560"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E91DEA6-B2AA-4E2B-989A-E673148FE377"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppRTCMobile/ARDAppClient.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1159"
+            endingLineNumber = "1159"
+            landmarkName = "-getTokenWithClientId:secret:code:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

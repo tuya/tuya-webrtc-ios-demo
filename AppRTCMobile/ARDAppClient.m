@@ -1027,7 +1027,7 @@ static int const kKbpsMultiplier = 1000;
      --header "t: {{timestamp}}"
      */
     //    NSString *strURL = [NSString stringWithFormat:@"https://openapi-cn.wgine.com/v1.0/access/11/config?type=websocket"];
-    NSString *strURL = [NSString stringWithFormat:@"https://openapi-cn.wgine.com/v1.0/access/11/config"];
+    NSString *strURL = [NSString stringWithFormat:@"https://openapi.tuyacn.com/v1.0/access/11/config"];
     NSURL *url = [NSURL URLWithString:strURL];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -1076,7 +1076,7 @@ static int const kKbpsMultiplier = 1000;
      --header "sign: {{easy_sign}}" \
      --header "t: {{timestamp}}"
      */
-    NSString *strURL = [NSString stringWithFormat:@"https://openapi-cn.wgine.com/v1.0/devices/%@/camera-config?type=rtc",did];
+    NSString *strURL = [NSString stringWithFormat:@"https://openapi.tuyacn.com/v1.0/devices/%@/camera-config?type=rtc",did];
     NSURL *url = [NSURL URLWithString:strURL];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -1122,7 +1122,7 @@ static int const kKbpsMultiplier = 1000;
      --header "t: {{timestamp}}"
      */
     //    NSString *code = @"a2bc554fe8a5ec6cd31654729c1f5c67" ;
-    NSString *strURL = [NSString stringWithFormat:@"https://openapi-cn.wgine.com/v1.0/token?code=%@&grant_type=2",code];
+    NSString *strURL = [NSString stringWithFormat:@"https://openapi.tuyacn.com/v1.0/token?code=%@&grant_type=2",code];
     NSURL *url = [NSURL URLWithString:strURL];
     //创建一个请求
     NSLog(@"url====%@",strURL);
@@ -1331,7 +1331,9 @@ static int const kKbpsMultiplier = 1000;
     [header setObject:uid forKey:@"from"];
     [header setObject:deviceId_ forKey:@"to"];
     [header setObject:@"offer" forKey:@"type"];
-    [header setObject:@"moto_pre_cn002" forKey:@"moto_id"];
+//    [header setObject:@"moto_pre_cn002" forKey:@"moto_id"];
+    NSString *moto_id = _rtcConfig[@"configs"][@"moto_id"];
+    [header setObject:moto_id forKey:@"moto_id"];
     
     [header setObject:_sessionId forKey:@"sessionid"];
     
@@ -1349,7 +1351,8 @@ static int const kKbpsMultiplier = 1000;
     [msg setObject:auth forKey:@"auth"];
     [configuration setObject:msg forKey:@"msg"];
     
-    _moto_topic= [NSString stringWithFormat:@"/av/moto/moto_pre_cn002/u/%@",deviceId_];
+//    _moto_topic= [NSString stringWithFormat:@"/av/moto/moto_pre_cn002/u/%@",deviceId_];
+    _moto_topic= [NSString stringWithFormat:@"/av/moto/%@/u/%@",moto_id,deviceId_];
     
     [message setObject:configuration forKey:@"data"];
     
@@ -1378,7 +1381,10 @@ static int const kKbpsMultiplier = 1000;
     [header setObject:uid forKey:@"from"];
     [header setObject:deviceId_ forKey:@"to"];
     [header setObject:@"candidate" forKey:@"type"];
-    [header setObject:@"moto_pre_cn002" forKey:@"moto_id"];
+//    [header setObject:@"moto_pre_cn002" forKey:@"moto_id"];
+    NSString *moto_id = _rtcConfig[@"configs"][@"moto_id"];
+    [header setObject:moto_id forKey:@"moto_id"];
+
     [header setObject:_sessionId forKey:@"sessionid"];
     [singaling setObject:header forKey:@"header"];
     
@@ -1393,7 +1399,8 @@ static int const kKbpsMultiplier = 1000;
     NSString *json = [self convertToJsonData:message];
     NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
     NSLog(@"=======sendCandidate :%@ ",json);
-    [_sessionManager.session publishData:jsonData onTopic:_moto_topic retain:NO qos:MQTTQosLevelAtLeastOnce publishHandler:^(NSError *error) {
+    NSString *moto_topic= [NSString stringWithFormat:@"/av/moto/%@/u/%@",moto_id,deviceId_];
+    [_sessionManager.session publishData:jsonData onTopic:moto_topic retain:NO qos:MQTTQosLevelAtLeastOnce publishHandler:^(NSError *error) {
         if (error) {
             NSLog(@"=======sendCandidate failed.....");
         }

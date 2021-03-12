@@ -26,10 +26,15 @@ The Demo mainly includes the following functions:
 3. Obtain the `DID` and `localKey` that need to access the camera through the App or other methods.
 
 4. Modify the corresponding parameters in the `ARDAppClient.m` file in Demo:
+5. 
    clientId_ = Modify it as the `clientid` obtained in step 1
+   
    secret_   = Modify it as the  `secret` obtained in step 1
+   
    authCode_ = Modify it as the authorization code obtained in step 2
+   
    deviceId_ = Modify it as the device ID obtained in step 3
+   
    localKey_ = Modify it as the LocalKey of the device obtained in step 3
    
 5. After the parameter modification is completed, run Demo for debugging.

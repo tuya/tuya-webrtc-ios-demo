@@ -17,10 +17,13 @@ The Demo mainly includes the following functions:
 2. Authorize through the URL below and get the authorization code.
 
     1). Fill in the clientid and user account, and then run the following link in the browser to authorize.
+   
     https://openapi-cn.wgine.com/login/open/tuya/login/v1/index.html?client_id=clientid (clientId obtained in step 1) clientid&redirect_uri=https://www.example.com/ auth&state=1234&username=(user account)&app_schema=tuyasmart&is_dynamic=true
 
     2). After the authorization is successful, the following address will be returned:
+    
     https://www.example.com/auth?code=xxxxxxxxxxxxxxxxxxxx&state=1234&platform_url=https://openapi-cn.wgine.com
+    
     The code in the address is the authorization code.
     
 3. Obtain the `DID` and `localKey` that need to access the camera through the App or other methods.
